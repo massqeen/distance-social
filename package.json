@@ -9,10 +9,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://massqeen.github.io/gulp-starter-kit",
+  "homepage": "https://github.com/massqeen/distance-social",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/massqeen/gulp-starter-kit.git"
+    "url": "git+https://github.com/massqeen/distance-social.git"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
