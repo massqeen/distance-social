@@ -95,6 +95,30 @@
     &:not(:nth-last-of-type(-n + 2)) {
       margin-right: 1.2rem;
     }
+
+    &--notifications {
+      position: relative;
+      //   .notifications-number {
+      //       position: absolute;
+      //       top: 0;
+      //       right: 0;
+
+      &::after {
+        position: absolute;
+        top: -8px;
+        right: -9px;
+        content: '8';
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        background: #f5222d;
+      }
+    }
   }
 
   &__item--info::before {
