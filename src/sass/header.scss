@@ -1,0 +1,137 @@
+.header {
+  background-color: $background;
+  min-width: 4.8rem;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0.6rem;
+}
+
+.form {
+  flex: 0 0 336px/1230px*100%;
+  position: relative;
+}
+
+.search {
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 1.2rem;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #D9D9D9;
+
+  &::placeholder {
+    color: $grey-6;
+  }
+}
+
+.submit-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-1.2rem, -50%);
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(../images/icons/search.svg) transparent;
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  & a {
+    color: #ffffff;
+    font-weight: 600;
+  }
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+
+  // .nav-user__item
+
+  &__item:first-child {
+    margin-right: 0.8rem;
+  }
+
+  // .nav-user__name
+
+  &__name {
+    &::after {
+      @extend %vertical-divide;
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+    }
+  }
+}
+
+.nav-panel {
+  display: flex;
+  align-items: center;
+
+  // .nav-panel__item
+
+  &__item {
+
+    &::after {
+      @extend %vertical-divide;
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+    }
+  }
+
+
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+
+  // .nav-icons__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:nth-last-of-type(-n+2)) {
+      margin-right: 1.2rem;
+    }
+  }
+
+  &__item--info::before {
+    @extend %vertical-divide;
+    margin-right: 1.2rem;
+  }
+
+  &__item--dropdown {
+    margin-left: 0.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  // .nav-icons__link
+
+  &__link {
+    line-height: 1;
+
+    &:hover .nav-icon {
+      fill: #fff;
+    }
+  }
+}
+
+.nav-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: #002766;
+  transition: fill .3s ease-in-out;
+}
+
+.nav-icon__dropdown {
+  width: 1.6rem;
+  height: 1.6rem;
+}

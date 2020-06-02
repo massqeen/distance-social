@@ -1,0 +1,35 @@
+@import 'minireset';
+@import 'normalize.scss';
+@import 'fonts';
+@import 'vars.scss';
+@import 'mixins.scss';
+
+%vertical-divide {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  height: 16px;
+  background: #003A8C;
+}
+
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  @include font($font, 1.4rem, 400);
+  line-height: 1.571;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@import 'header';
+
+@import 'footer';
+@import 'media';
