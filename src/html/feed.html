@@ -1,0 +1,50 @@
+<main class="feed main__feed">
+  <div class="feed__create-post">
+    <header class="feed__create-post-header">
+      Create post
+    </header>
+    <div class="feed__create-post-input">
+      <img
+        src="./images/icons/user-avatar.svg"
+        alt="user-avatar"
+        class="feed__create-post-avatar"
+      />
+      <form action="get" class="feed__form" id="create-post">
+        <textarea
+          name="post"
+          id="post"
+          class="post-text"
+          placeholder="What’s on your mind, Mateusz?"
+          spellcheck="true"
+        ></textarea>
+      </form>
+    </div>
+    <footer class="feed__create-post-footer">
+      <div class="feed__footer-btn-wrapper">
+        <button class="create-post-btn">
+          <svg class="icon">
+            <use href="./images/icons/sprite.svg#icon-picture"></use>
+          </svg>
+          <span class="create-post-btn__text">Photo/Video</span>
+        </button>
+        <button class="create-post-btn">
+          <svg class="icon">
+            <use href="./images/icons/sprite.svg#icon-friend"></use>
+          </svg>
+          <span class="create-post-btn__text">Tag friends</span>
+        </button>
+        <button class="create-post-btn">
+          <svg class="icon">
+            <use href="./images/icons/sprite.svg#icon-happy"></use>
+          </svg>
+          <span class="create-post-btn__text">Feeling/Activ...</span>
+        </button>
+        <button class="create-post-btn">
+          <svg class="icon">
+            <use href="./images/icons/sprite.svg#icon-dots"></use>
+          </svg>
+        </button>
+      </div>
+    </footer>
+  </div>
+</main>

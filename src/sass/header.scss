@@ -7,7 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 0.6rem;
+  padding: 0.8rem 2.1rem;
+  margin-bottom: 1.6rem;
 }
 
 .form {
@@ -150,7 +151,14 @@
   transition: fill 0.3s ease-in-out;
 }
 
-.nav-icon__dropdown {
+#header-chat {
+  --background: transparent;
+  --dots: #002766;
+  --border: #002766;
+  --dot: #002766;
+}
+
+.dropdown-icon {
   width: 1.6rem;
   height: 1.6rem;
 }

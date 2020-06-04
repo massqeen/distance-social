@@ -1,18 +1,17 @@
-@import 'minireset';
-@import 'normalize.scss';
-@import 'fonts';
-@import 'vars.scss';
-@import 'mixins.scss';
+@import "minireset";
+@import "normalize.scss";
+@import "fonts";
+@import "vars.scss";
+@import "mixins.scss";
 
 %vertical-divide {
-  content: '';
+  content: "";
   display: inline-block;
   vertical-align: middle;
   width: 1px;
   height: 16px;
-  background: #003A8C;
+  background: #003a8c;
 }
-
 
 :root {
   font-size: 62.5%;
@@ -21,6 +20,7 @@
 body {
   @include font($font, 1.4rem, 400);
   line-height: 1.571;
+  color: $text;
   background-color: $background-main;
 }
 
@@ -28,9 +28,21 @@ body {
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
+  border: 1px solid red;
 }
 
-@import 'header';
+.main__container {
+  display: flex;
+}
 
-@import 'footer';
-@import 'media';
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+@import "header";
+@import "aside";
+@import "feed";
+
+@import "footer";
+@import "media";

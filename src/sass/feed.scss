@@ -1,0 +1,103 @@
+.main__feed {
+  margin-right: 2.4rem;
+  flex-basis: 588px/1200px*100%;
+}
+
+.feed {
+  border: 1px solid green;
+
+  // .feed__create-post
+
+  &__create-post {
+    border: 1px solid blue;
+  }
+
+  // .feed__create-post-header
+
+  &__create-post-header {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.6rem;
+    font-weight: 600;
+    color: $text;
+    border-bottom: 1px solid #D9D9D9;
+  }
+
+  // .feed__create-post-input
+
+  &__create-post-input {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1.6rem 0 2.4rem 1.6rem;
+
+    &::placeholder {
+      @include font($font, 1.6rem, 400);
+      color: #8C8C8C;
+      line-height: 22/16;
+    }
+  }
+
+  // .feed__create-post-avatar
+
+  &__create-post-avatar {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.6rem;
+  }
+
+  &__form {
+    width: (532px - 16px)/588px*100%;
+  }
+
+  // .feed__create-post-footer
+
+  &__create-post-footer {
+    background-color: #fff;
+    padding: 0 1.6rem 1.6rem 1.6rem;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #E8E8E8;
+      margin: 0 auto 1.6rem auto;
+    }
+
+  }
+}
+
+.feed__footer-btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+
+.post-text {
+  resize: none;
+}
+
+.create-post-btn {
+  display: flex;
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 4.8rem;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 0.8rem;
+  }
+
+  // .create-post-btn__text
+
+  &__text {
+    font-weight: 600;
+    color: $text;
+    margin-left: 0.8rem;
+    width: 90%;
+  }
+}
+
+.icon {}

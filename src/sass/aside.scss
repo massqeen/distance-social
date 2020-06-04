@@ -1,0 +1,110 @@
+.main__aside {
+  margin-right: 1.8rem;
+}
+
+.aside {
+  flex-basis: 19.2rem;
+  border: 1px solid green;
+  // .aside__user
+
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+  }
+
+  // .aside__user-item
+
+  &__user-item {
+    margin-right: 0.8rem;
+  }
+
+  // .aside__user-name
+
+  &__user-name {
+    color: $accent-text;
+  }
+
+  // .aside__nav
+  &__nav {
+
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__nav-name {
+    font-weight: 600;
+    color: $accent-text;
+    margin-bottom: 0.4rem;
+    padding-left: 1rem;
+  }
+
+  // .aside__nav-item
+
+  &__nav-item {
+    padding: 0.4rem 0.8rem 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+
+    &--active {
+      background-color: #fff;
+      border-radius: 4px;
+    }
+
+    &--active>.aside__nav-link {
+      color: $accent-text;
+      font-weight: 600;
+    }
+
+  }
+
+  // .aside__nav-link
+
+  &__nav-link {
+    color: $text;
+    margin-left: 0.8rem;
+
+    // .aside__nav-link--uppercase
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  &__nav-button {
+    padding-left: 1.4rem;
+  }
+}
+
+.active-options {
+  margin-left: auto;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#aside-chat {
+  --background: #e6f7ff;
+  --dots: #1890ff;
+  --border: #1890ff;
+  --dot: #1890ff;
+}
+
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+
+  &__text {
+    margin-left: 1.2rem;
+    color: $accent-color;
+  }
+}
+
+.dropdown-icon--grey {
+  fill: $grey-6;
+}
