@@ -10,14 +10,19 @@
         class="feed__create-post-avatar"
       />
       <form action="get" class="feed__form" id="create-post">
-        <textarea
+        <label for="post"></label>
+        <input
+          type="text"
           name="post"
           id="post"
-          class="post-text"
-          placeholder="What’s on your mind, Mateusz?"
-          spellcheck="true"
-        ></textarea>
+          class="post-text visually-hidden"
+        />
       </form>
+      <div
+        class="feed__create-post-text"
+        contenteditable="true"
+        data-placeholder="What’s on your mind, Mateusz?"
+      ></div>
     </div>
     <footer class="feed__create-post-footer">
       <div class="feed__footer-btn-wrapper">
@@ -46,5 +51,142 @@
         </button>
       </div>
     </footer>
+  </div>
+
+  <div class="feed__post">
+    <header class="feed__post-header">
+      <ul class="feed__post-user">
+        <li class="feed__post-user-item">
+          <a href="#" class="feed__post-user-avatar">
+            <img
+              src="./images/icons/user-avatar.svg"
+              alt="user-avatar"
+              height="48"
+              width="48"
+            />
+          </a>
+        </li>
+        <li class="feed__post-user-item">
+          <a href="#" class="feed__post-user-name">Mateusz Wierzbicki</a>
+          <div class="feed__post-settings-wrapper">
+            <span class="feed__post-time">3 hrs</span>
+            <a href="#" class="feed__post-settings">
+              <img
+                src="./images/icons/settings.svg"
+                alt="post-settings"
+                height="14"
+                width="14"
+              />
+            </a>
+          </div>
+        </li>
+        <li class="feed__post-user-item">
+          <button class="active-options">
+            <svg class="icon">
+              <use href="./images/icons/sprite.svg#icon-dots"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </header>
+
+    <div class="feed__post-body">
+      <p class="feed__post-body-text">
+        Did you know that all of this was made using only components and styles
+        from Ant Desing System for Figma?
+      </p>
+      <p class="feed__post-body-link">
+        Learn more:
+        <a href="https://antforfigma.com" class="link"
+          >https://antforfigma.com</a
+        >
+      </p>
+      <img
+        src="../images/post-img.png"
+        alt="Ant Design System for Figma"
+        class="feed__post-body-img"
+      />
+      <button class="post-btn">
+        <svg class="icon post-btn__icon">
+          <use href="./images/icons/sprite.svg#icon-like" id="post-like"></use>
+        </svg>
+        <span class="post-btn__text">23</span>
+      </button>
+    </div>
+
+    <footer class="feed__post-footer">
+      <div class="feed__footer-btn-wrapper feed__footer-post-btn-wrapper">
+        <button class="post-btn">
+          <svg class="icon">
+            <use
+              href="./images/icons/sprite.svg#icon-like"
+              id="post-footer-like"
+            ></use>
+          </svg>
+          <span class="post-btn__text">Like</span>
+        </button>
+        <button class="post-btn">
+          <svg class="icon">
+            <use
+              href="./images/icons/sprite.svg#icon-chat"
+              id="post-footer-chat"
+            ></use>
+          </svg>
+          <span class="post-btn__text">Comment</span>
+        </button>
+        <button class="post-btn">
+          <svg class="icon">
+            <use href="./images/icons/sprite.svg#icon-share"></use>
+          </svg>
+          <span class="post-btn__text">Share</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <div class="feed__post">
+    <header class="feed__post-header">
+      <ul class="feed__post-user">
+        <li class="feed__post-user-item">
+          <a href="#" class="feed__post-user-avatar">
+            <img
+              src="./images/icons/figma-avatar.svg"
+              alt="user-avatar"
+              height="48"
+              width="48"
+            />
+          </a>
+        </li>
+        <li class="feed__post-user-item">
+          <a href="#" class="feed__post-user-name">Figma</a>
+          <div class="feed__post-settings-wrapper">
+            <span class="feed__post-time">6 hrs</span>
+            <a href="#" class="feed__post-settings">
+              <img
+                src="./images/icons/settings.svg"
+                alt="post-settings"
+                height="14"
+                width="14"
+              />
+            </a>
+          </div>
+        </li>
+        <li class="feed__post-user-item">
+          <button class="active-options">
+            <svg class="icon">
+              <use href="./images/icons/sprite.svg#icon-dots"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </header>
+
+    <div class="feed__post-body">
+      <p class="feed__post-body-text">
+        📙 Want to implement type in your design system in Figma? This guide
+        covers everything you should consider, from choosing the right
+        typography scale to naming and organizing your text styles.
+      </p>
+    </div>
   </div>
 </main>

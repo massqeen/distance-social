@@ -6,3 +6,21 @@ $background-main: #E5E5E5;
 $font: 'SF Pro Display',
 sans-serif;
 $grey-6: #bfbfbf;
+
+%vertical-divide {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  height: 16px;
+  background: #003a8c;
+}
+
+%horizontal-divide {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #e8e8e8;
+  margin: 0 auto 1.6rem auto;
+}

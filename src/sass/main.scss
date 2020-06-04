@@ -4,14 +4,7 @@
 @import "vars.scss";
 @import "mixins.scss";
 
-%vertical-divide {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 1px;
-  height: 16px;
-  background: #003a8c;
-}
+
 
 :root {
   font-size: 62.5%;
