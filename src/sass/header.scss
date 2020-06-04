@@ -141,6 +141,13 @@
     &:hover .nav-icon {
       fill: #fff;
     }
+
+    &:hover #header-chat {
+      --background: transparent;
+      --dots: #fff;
+      --border: #fff;
+      --dot: #fff;
+    }
   }
 }
 
