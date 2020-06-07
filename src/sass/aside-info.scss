@@ -1,0 +1,237 @@
+.aside-info {
+  // .aside-info__stories-header
+
+  &__stories-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+  }
+
+  // .aside-info__stories-title
+
+  &__stories-title {
+    font-weight: 600;
+    color: #262626;
+  }
+
+  // .aside-info__stories-options
+
+  &__stories-options,
+  &__birthday-info-wrapper,
+  &__stories-body-info-item {
+    display: flex;
+    align-items: center;
+  }
+
+  // .aside-info__stories-wrapper
+
+  &__stories-wrapper {
+    margin-left: 1.2rem;
+  }
+
+  // .aside-info__stories-body-item
+
+  &__stories-body-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.6rem;
+  }
+
+  // .aside-info__stories-body-link
+
+  &__stories-body-link {
+    display: block;
+    color: $background;
+    font-weight: 600;
+  }
+
+  // .aside-info__stories-body-time
+
+  &__stories-body-time {
+    color: #8c8c8c;
+  }
+
+  // .aside-info__stories-footer
+
+  &__stories-footer {
+    &::before {
+      @extend %horizontal-divide;
+    }
+  }
+
+  // .aside-info__stories-link
+
+  &__stories-link {
+    color: $background;
+    margin-left: 0.8rem;
+  }
+
+  &__stories-text,
+  &__stories-link {
+    font-weight: 600;
+  }
+
+  // .aside-info__icon
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  // .aside-info__text
+
+  &__text {
+    margin-left: 0.4rem;
+    color: #8C8C8C;
+  }
+
+  // .aside-info__button
+
+  &__button {
+    margin-left: 0.4rem;
+    background: #F5F5F5;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    min-height: 2.2rem;
+    cursor: pointer;
+  }
+
+  // .aside-info__footer-btn-wrapepr
+
+  &__footer-btn-wrapper {
+    display: flex;
+    margin-bottom: 1.6rem;
+    position: relative;
+  }
+
+
+  // .aside-info__footer-btn
+
+  &__footer-btn {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  // .aside-info__footer-radio
+  &__footer-radio {
+    flex: 1 0 33.333%;
+
+    &::after {
+      @extend %radio-btn;
+    }
+
+    &--likes::after {
+      content: 'Likes';
+      border-right: 1px solid transparent;
+    }
+
+    &--views::after {
+      content: 'Views';
+      border-right: 1px solid transparent;
+    }
+
+    &--posts::after {
+      content: 'Posts';
+    }
+
+    &:hover::after {
+      border: 1px solid #1890FF;
+      color: #1890FF;
+    }
+  }
+
+  // .aside-info__footer-info-counter
+
+  &__footer-info-counter {
+    display: block;
+    font-size: 2.4rem;
+    line-height: 1.333;
+    color: #262626;
+    text-align: center;
+  }
+
+  // .aside-info__footer-info-term
+
+  &__footer-info-term {
+    display: block;
+    text-align: center;
+  }
+}
+
+.main {
+  // .main__aside-info
+
+  &__aside-info {
+    flex-basis: 384px/1200px * 100%;
+  }
+}
+
+.stories-settings {
+  color: $background;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  // .stories-settings--pseudo
+
+  &--pseudo::before {
+    @extend %point-divider;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+  }
+
+  // .stories-settings__icon
+
+  &__icon {
+    margin-right: 0.4rem;
+  }
+}
+
+.active-options {
+  position: relative;
+  // .active-options__tooltip
+
+  &:hover &__tooltip--hover {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__tooltip--hover {
+    opacity: 0;
+    visibility: hidden;
+    color: #fff;
+    position: absolute;
+    top: -34px;
+    left: -10px;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+    cursor: default;
+  }
+
+  &__tooltip--hover::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: -9px;
+    background-color: #000;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 6.3rem;
+    height: 3.2rem;
+    z-index: -1;
+  }
+
+  &__tooltip--hover::after {
+    @extend %popup-arrow;
+    bottom: -14px;
+    left: 17px;
+    background-color: #000;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}

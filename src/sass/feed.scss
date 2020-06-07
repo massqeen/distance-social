@@ -5,15 +5,6 @@
 
 .feed {
 
-  // .feed__create-post
-
-  &__create-post,
-  &__post {
-    margin-bottom: 1.6rem;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    background-color: #fff;
-  }
 
   // .feed__create-post-header
 
@@ -25,6 +16,9 @@
     color: $text;
     background-color: $background-main;
     border-bottom: 1px solid #d9d9d9;
+    margin-top: -1.6rem;
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
   }
 
   // .feed__create-post-input
@@ -33,7 +27,9 @@
     display: flex;
     align-items: center;
     background-color: #fff;
-    padding: 1.6rem 1.6rem 2.4rem 1.6rem;
+    padding-top: 1.6rem;
+    padding-bottom: 2.4rem;
+    overflow-x: hidden;
 
     &::placeholder {
       @include font($font, 1.6rem, 400);
@@ -54,6 +50,7 @@
     min-height: 4rem;
     display: flex;
     align-items: center;
+
   }
 
   &__create-post-text:empty::before {
@@ -67,7 +64,6 @@
 
   &__create-post-footer {
     background-color: #fff;
-    padding: 0 1.6rem 1.6rem 1.6rem;
     border-radius: 4px;
 
     &::before {
@@ -78,6 +74,8 @@
   &__footer-btn-wrapper {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    position: relative;
   }
 }
 
@@ -159,15 +157,7 @@
   &__post-time {
 
     &::after {
-      content: '';
-      display: inline-block;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: #BFBFBF;
-      margin-left: 0.6rem;
-      margin-right: 0.6rem;
-      vertical-align: middle;
+      @extend %point-divider;
     }
   }
 
@@ -245,4 +235,50 @@
   --dots: #595959;
   --border: #595959;
   --dot: #595959;
+}
+
+.plate {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 1.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.popup-list {
+  padding: 0 1.2rem;
+  position: absolute;
+  bottom: 3.6rem;
+  right: -7rem;
+  z-index: 1;
+
+  // .popup-list__item
+
+  &__item {
+    padding: 0.5rem 1.2rem;
+
+    &:last-child::after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-top: 9px solid #fff;
+      bottom: -0.9rem;
+      left: 2.8rem;
+    }
+  }
+
+
+
+  // .popup-list__link
+
+  &__link {
+    color: $text;
+  }
+
+  &::after {}
 }
